@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>古影今声｜把非遗做成年轻人愿意进入的产品 · 董盛超</title>
+  <meta name="description" content="董盛超的非遗数字化项目案例：11 省 58 市、869 位从业者访谈、2 万+ 问卷，到「灯影世界」V1.0 与内容矩阵。">
+  <meta name="theme-color" content="#f2ede3">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://xixiyiyiyi.github.io/guying/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="古影今声｜把非遗做成年轻人愿意进入的产品">
+  <meta property="og:description" content="从 869 位从业者的田野访谈，到「灯影世界」V1.0 与内容矩阵。董盛超的项目复盘。">
+  <meta property="og:url" content="https://xixiyiyiyi.github.io/guying/">
+  <meta property="og:image" content="https://xixiyiyiyi.github.io/guying/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23181512'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23f6e7c8' font-family='serif'%3E影%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f2ede3;
+      --paper-2: #fbf8f1;
+      --ink: #181512;
+      --ink-2: #4c4a43;
+      --ink-3: #7a766c;
+      --line: #d8cdbd;
+      --red: #a84130;
+      --red-2: #c45a45;
+      --amber: #c58a3f;
+      --green: #2f4b3d;
+      --dark: #1c1814;
+      --white: #fffdf8;
+      --serif: "Songti SC", "STSong", "Iowan Old Style", "Baskerville", Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --mono: "SFMono-Regular", "SF Mono", "Roboto Mono", Menlo, monospace;
+      --max: 1120px;
+      --gutter: clamp(20px, 4.2vw, 56px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .45;
+      background-image:
+        linear-gradient(rgba(80, 65, 45, .03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(80, 65, 45, .03) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    ::selection { color: var(--white); background: var(--red); }
+    a { color: inherit; }
+    button { font: inherit; color: inherit; }
+    h1, h2, h3, p, ul, ol, blockquote, dl, dd { margin: 0; }
+    ul, ol { padding: 0; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+    .skip {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      padding: 9px 13px;
+      color: var(--white);
+      background: var(--ink);
+      transform: translateY(-170%);
+    }
+    .skip:focus { transform: translateY(0); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 58px;
+      padding: 0 var(--gutter);
+      border-bottom: 1px solid var(--line);
+      background: rgba(242, 237, 227, .92);
+      backdrop-filter: blur(12px);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: var(--paper-2);
+      background: var(--ink);
+      font-family: var(--serif);
+      font-size: 15px;
+    }
+    .brand-text { font-family: var(--mono); font-size: 10px; font-weight: 650; letter-spacing: .12em; }
+    .topnav { display: flex; align-items: center; gap: 22px; }
+    .topnav a { color: var(--ink-2); font-size: 12px; text-decoration: none; white-space: nowrap; }
+    .topnav a:hover { color: var(--red); }
+    .top-actions { display: flex; align-items: center; gap: 14px; }
+    .top-note { font-family: var(--mono); font-size: 9px; color: var(--ink-3); letter-spacing: .06em; white-space: nowrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 650;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color .15s ease, background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .btn:hover { background: var(--red); border-color: var(--red); transform: translateY(-1px); }
+    .btn-small { min-height: 32px; padding: 0 12px; font-size: 10px; }
+    .btn-outline { background: transparent; color: var(--ink); }
+    .btn-outline:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .text-link { color: var(--ink-2); font-size: 12px; text-decoration: none; border-bottom: 1px solid var(--line); }
+    .text-link:hover { color: var(--red); border-color: var(--red); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
+      gap: clamp(36px, 6vw, 84px);
+      align-items: center;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(52px, 7vw, 90px) var(--gutter) clamp(44px, 6vw, 76px);
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--red); }
+    h1 {
+      margin-top: 18px;
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4.2vw, 3.9rem);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    h1 em { font-style: normal; color: var(--red); }
+    .nowrap { white-space: nowrap; }
+    .lede { max-width: 640px; margin-top: 24px; color: var(--ink-2); font-size: clamp(15px, 1.3vw, 17px); line-height: 1.75; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; color: var(--ink-3); font-family: var(--mono); font-size: 10px; letter-spacing: .03em; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .chip { padding: 7px 10px; border: 1px solid var(--line); background: rgba(255, 253, 248, .4); color: var(--ink-2); font-family: var(--mono); font-size: 10px; }
+    .chip b { color: var(--ink); font-weight: 650; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 30px; }
+
+    .hero-panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 480px;
+      padding: 22px;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--dark);
+      box-shadow: 0 26px 70px rgba(30, 24, 16, .16);
+    }
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 50% 42%, rgba(197, 138, 63, .3), transparent 55%);
+      pointer-events: none;
+    }
+    .panel-head {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 253, 248, .14);
+      color: rgba(255, 253, 248, .45);
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: .08em;
+    }
+    .orbit { position: relative; z-index: 1; display: grid; place-items: center; flex: 1; min-height: 280px; margin: 18px 0; }
+    .ring { position: absolute; border: 1px dashed rgba(197, 138, 63, .4); border-radius: 50%; }
+    .ring.one { width: 230px; height: 230px; }
+    .ring.two { width: 320px; height: 320px; opacity: .55; }
+    .core { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .core strong { color: #f6e7c8; font-family: var(--serif); font-size: clamp(64px, 9vw, 104px); font-weight: 500; line-height: .9; letter-spacing: -.08em; text-shadow: 0 0 38px rgba(197, 138, 63, .35); }
+    .core span { color: rgba(255, 253, 248, .6); font-family: var(--mono); font-size: 8px; letter-spacing: .16em; }
+    .node { position: absolute; z-index: 3; display: flex; flex-direction: column; gap: 2px; padding: 7px 9px; border: 1px solid rgba(255, 253, 248, .18); background: rgba(28, 24, 20, .7); backdrop-filter: blur(4px); }
+    .node b { color: #f6e7c8; font-family: var(--serif); font-size: 16px; font-weight: 500; line-height: 1.1; }
+    .node i { color: rgba(255, 253, 248, .48); font-family: var(--mono); font-size: 7px; font-style: normal; }
+    .node.a { top: 10%; left: 0; }
+    .node.b { top: 20%; right: 0; }
+    .node.c { right: 8%; bottom: 12%; }
+    .panel-flow { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 8px; align-items: center; padding-top: 16px; border-top: 1px solid rgba(255, 253, 248, .14); }
+    .panel-flow div { display: flex; flex-direction: column; gap: 3px; }
+    .panel-flow span { color: rgba(197, 138, 63, .8); font-family: var(--mono); font-size: 7px; }
+    .panel-flow strong { font-family: var(--serif); font-size: 15px; font-weight: 500; }
+    .panel-flow p { color: rgba(255, 253, 248, .55); font-size: 10px; line-height: 1.4; }
+    .panel-flow i { color: rgba(255, 253, 248, .3); font-size: 12px; font-style: normal; }
+    .panel-note { position: relative; z-index: 1; margin-top: 14px; color: rgba(255, 253, 248, .4); font-size: 10px; line-height: 1.55; }
+
+    .section { max-width: var(--max); margin: 0 auto; padding: clamp(56px, 7vw, 92px) var(--gutter); border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; margin-bottom: clamp(30px, 4vw, 48px); }
+    .section-label { padding-top: 8px; color: var(--red); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+    .section-head h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.9rem); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; text-wrap: balance; }
+    .section-deck { max-width: 700px; margin-top: 16px; color: var(--ink-2); font-size: 15px; line-height: 1.75; }
+
+    .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+    .problem-card { padding: 24px 22px 26px; background: var(--paper-2); }
+    .problem-card span { color: var(--red); font-family: var(--mono); font-size: 9px; }
+    .problem-card h3 { margin-top: 16px; font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -.02em; }
+    .problem-card p { margin-top: 10px; color: var(--ink-2); font-size: 13px; line-height: 1.7; }
+    .research-note { margin-top: 18px; padding: 14px 16px; border-left: 2px solid var(--red); background: rgba(168, 65, 48, .05); color: var(--ink-2); font-size: 12px; line-height: 1.7; }
+    .research-note b { color: var(--ink); }
+
+    .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .work-card { display: flex; flex-direction: column; padding: 24px 22px; border: 1px solid var(--line); background: rgba(255, 253, 248, .45); }
+    .work-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .role { display: inline-flex; align-items: center; gap: 6px; color: var(--red); font-family: var(--mono); font-size: 8px; letter-spacing: .06em; }
+    .role::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--red); }
+    .work-num { color: var(--ink-3); font-family: var(--mono); font-size: 9px; }
+    .work-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 22px; font-weight: 500; }
+    .work-lede { margin-top: 8px; color: var(--ink-2); font-size: 13px; line-height: 1.7; }
+    .work-card ul { display: flex; flex-direction: column; gap: 9px; margin-top: 16px; list-style: none; }
+    .work-card li { position: relative; padding-left: 14px; color: var(--ink-2); font-size: 12.5px; line-height: 1.65; }
+    .work-card li::before { content: ""; position: absolute; top: .62em; left: 0; width: 5px; height: 5px; border: 1px solid var(--red); border-radius: 50%; }
+    .team-note { margin-top: 18px; padding: 16px 18px; border: 1px solid var(--line); background: var(--paper-2); color: var(--ink-2); font-size: 12px; line-height: 1.7; }
+    .team-note b { color: var(--ink); }
+
+    .loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 14px; align-items: stretch; }
+    .loop-card { display: flex; flex-direction: column; min-height: 220px; padding: 24px 22px; color: var(--white); background: var(--dark); }
+    .loop-card span { color: rgba(197, 138, 63, .85); font-family: var(--mono); font-size: 8px; }
+    .loop-card h3 { margin-top: 18px; font-family: var(--serif); font-size: 22px; font-weight: 500; }
+    .loop-card p { margin-top: 10px; color: rgba(255, 253, 248, .62); font-size: 12.5px; line-height: 1.65; }
+    .loop-card b { margin-top: auto; padding-top: 18px; color: #f6e7c8; font-family: var(--mono); font-size: 9px; font-weight: 500; line-height: 1.6; }
+    .loop-arrow { display: grid; place-items: center; color: var(--red); font-size: 20px; }
+    .loop-note { margin-top: 16px; color: var(--ink-3); font-size: 12px; text-align: right; }
+    .quote { margin: clamp(36px, 5vw, 60px) 0 0; padding: clamp(26px, 4vw, 42px); border: 1px solid var(--line); background: rgba(197, 138, 63, .08); }
+    .quote p { color: var(--ink); font-family: var(--serif); font-size: clamp(1.4rem, 2.3vw, 2rem); line-height: 1.4; letter-spacing: -.03em; text-wrap: balance; }
+    .quote span { display: block; margin-top: 16px; color: var(--ink-3); font-family: var(--mono); font-size: 9px; letter-spacing: .06em; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+    .evidence-card { display: flex; flex-direction: column; padding: 24px 22px; background: var(--paper-2); }
+    .evidence-card .num { color: var(--ink); font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.7rem); font-weight: 500; line-height: 1; letter-spacing: -.05em; }
+    .evidence-card .num em { color: var(--red); font-size: .55em; font-style: normal; letter-spacing: 0; }
+    .evidence-card .label { margin-top: 8px; color: var(--ink); font-size: 13px; font-weight: 650; }
+    .evidence-card .desc { margin-top: 6px; color: var(--ink-2); font-size: 12px; line-height: 1.6; }
+    .caliber { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 10.5px; line-height: 1.55; }
+    .caliber b { margin-right: 6px; color: var(--red); font-family: var(--mono); font-size: 8px; letter-spacing: .05em; }
+
+    .boundary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .boundary-card { padding: 24px 22px; border: 1px solid var(--line); background: var(--paper-2); }
+    .boundary-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; }
+    .boundary-card ul { display: flex; flex-direction: column; gap: 9px; margin-top: 16px; list-style: none; }
+    .boundary-card li { position: relative; padding-left: 16px; color: var(--ink-2); font-size: 12.5px; line-height: 1.65; }
+    .boundary-card.can li::before { content: "+"; position: absolute; top: 0; left: 0; color: var(--green); font-weight: 700; }
+    .boundary-card.cannot li::before { content: "−"; position: absolute; top: 0; left: 0; color: var(--red); font-weight: 700; }
+    .qa { margin-top: clamp(32px, 4vw, 48px); padding-top: 22px; border-top: 1px solid var(--line); }
+    .qa h3 { color: var(--red); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+    .qa-list { display: grid; gap: 1px; margin-top: 16px; border: 1px solid var(--line); background: var(--line); }
+    .qa-item { padding: 20px 22px; background: var(--paper-2); }
+    .qa-item dt { color: var(--ink); font-family: var(--serif); font-size: 18px; line-height: 1.35; }
+    .qa-item dd { margin-top: 8px; color: var(--ink-2); font-size: 12.5px; line-height: 1.7; }
+
+    .contact { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); gap: clamp(30px, 5vw, 70px); align-items: start; max-width: var(--max); margin: 0 auto; padding: clamp(56px, 7vw, 92px) var(--gutter); border-top: 1px solid var(--line); }
+    .contact h2 { margin-top: 12px; font-family: var(--serif); font-size: clamp(1.9rem, 3.2vw, 3rem); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; text-wrap: balance; }
+    .contact-card { padding: 24px 22px; border: 1px solid var(--line); background: var(--paper-2); }
+    .contact-card p { color: var(--ink-2); font-size: 12.5px; line-height: 1.7; }
+    .contact-card .name { color: var(--ink); font-family: var(--serif); font-size: 22px; }
+    .contact-card .mail { display: inline-block; margin-top: 14px; color: var(--red); font-family: var(--mono); font-size: 12px; text-decoration: none; border-bottom: 1px solid var(--red); }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; max-width: var(--max); margin: 0 auto; padding: 22px var(--gutter) 40px; border-top: 1px solid var(--line); color: var(--ink-3); font-family: var(--mono); font-size: 9px; letter-spacing: .04em; }
+
+    .toast { position: fixed; bottom: 24px; left: 50%; z-index: 100; padding: 11px 16px; color: var(--white); background: var(--ink); font-size: 12px; opacity: 0; pointer-events: none; transform: translate(-50%, 20px); transition: opacity .2s ease, transform .2s ease; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-panel { min-height: auto; }
+      .problem-grid, .work-grid, .boundary-grid, .evidence-grid { grid-template-columns: 1fr; }
+      .loop { grid-template-columns: 1fr; }
+      .loop-arrow { min-height: 24px; transform: rotate(90deg); }
+      .contact { grid-template-columns: 1fr; }
+      .section-head { grid-template-columns: 1fr; gap: 14px; }
+      .section-label { padding-top: 0; }
+    }
+
+    @media (max-width: 640px) {
+      .topnav, .top-note { display: none; }
+      .hero { padding-top: 36px; }
+      h1 { font-size: clamp(2.2rem, 10vw, 3.1rem); }
+      .lede { font-size: 15px; }
+      .hero-panel { padding: 18px; }
+      .orbit { display: flex; flex-direction: column; gap: 12px; min-height: 0; padding: 22px 0; }
+      .ring { display: none; }
+      .node { position: static; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+      .node b { font-size: 15px; }
+      .panel-flow { grid-template-columns: 1fr; gap: 8px; }
+      .panel-flow i { display: none; }
+      .panel-flow div { flex-direction: row; align-items: baseline; justify-content: space-between; padding-bottom: 6px; border-bottom: 1px solid rgba(255, 253, 248, .1); }
+      .panel-flow p { text-align: right; }
+      .quote, .evidence-card, .contact-card { padding-right: 18px; padding-left: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 14mm; }
+      body { background: #fff; color: #000; font-size: 10.5pt; }
+      body::before, .topbar, .hero-actions, .contact-actions, .toast, .skip { display: none !important; }
+      .hero { grid-template-columns: 1fr; padding: 0 0 8mm; }
+      .hero-panel { min-height: 0; padding: 8mm; color: #111; background: #f6f2ea; border: 1px solid #999; box-shadow: none; break-inside: avoid; }
+      .core strong, .node b, .loop-card b { color: #111; }
+      .panel-head, .panel-note, .node i, .panel-flow p, .core span { color: #555; }
+      .node { border-color: #999; background: #fff; }
+      .loop-card { color: #111; background: #f6f2ea; border: 1px solid #999; }
+      .loop-card p { color: #444; }
+      .section, .contact { max-width: none; padding: 7mm 0; }
+      .section-head { grid-template-columns: 28mm 1fr; }
+      .problem-grid, .work-grid, .boundary-grid, .evidence-grid { grid-template-columns: 1fr 1fr; }
+      .problem-card, .work-card, .evidence-card, .boundary-card, .loop-card, .qa-item { break-inside: avoid; }
+      .loop { grid-template-columns: 1fr 1fr 1fr; }
+      .loop-arrow { display: none; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="古影今声案例，回到顶部">
+      <span class="brand-mark">影</span>
+      <span class="brand-text">CASE 01 / 古影今声</span>
+    </a>
+    <nav class="topnav" aria-label="章节导航">
+      <a href="#problem">问题</a>
+      <a href="#work">动作</a>
+      <a href="#structure">结构</a>
+      <a href="#evidence">证据</a>
+      <a href="#boundary">边界</a>
+    </nav>
+    <div class="top-actions">
+      <span class="top-note">2027 校招 · 产品 / 运营</span>
+      <button class="btn btn-small" type="button" onclick="window.print()">打印</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">CASE 01 / 用户研究 → 产品策划 → 内容运营</p>
+        <h1>从 <em>869</em> 位从业者的田野访谈，到<span class="nowrap">一个</span>年轻人<span class="nowrap">愿意进入的</span>非遗产品。</h1>
+        <p class="lede">古影今声是国家级非遗孝义皮影的数字化项目。我从第二次参赛起担任项目负责人，负责用户研究、产品策划与内容运营，把分散的从业者经验整理成「知识—体验—消费」的产品路径。</p>
+        <div class="meta-row">
+          <span>2023.11—2024.12</span>
+          <span>11 人跨学科团队</span>
+          <span>项目负责人（第二次参赛起）</span>
+        </div>
+        <div class="chips" aria-label="关键证据">
+          <span class="chip"><b>11 省 58 市</b> 调研覆盖</span>
+          <span class="chip"><b>869</b> 位从业者访谈</span>
+          <span class="chip"><b>2 万+</b> 有效问卷</span>
+          <span class="chip"><b>4 万+</b> 核心功能用户</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="#evidence">先看证据</a>
+          <a class="text-link" href="#boundary">这个案例不能证明什么 →</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="古影今声项目结构图">
+        <div class="panel-head"><span>PROJECT MAP</span><span>2023—2024</span></div>
+        <div class="orbit" aria-hidden="true">
+          <span class="ring one"></span>
+          <span class="ring two"></span>
+          <div class="core"><strong>影</strong><span>灯影世界 V1.0</span></div>
+          <div class="node a"><b>11 省 58 市</b><i>田野调研</i></div>
+          <div class="node b"><b>1.2 万+</b><i>资料条目</i></div>
+          <div class="node c"><b>4 万+</b><i>核心功能用户</i></div>
+        </div>
+        <div class="panel-flow">
+          <div><span>01</span><strong>研究</strong><p>869 位从业者</p></div>
+          <i aria-hidden="true">→</i>
+          <div><span>02</span><strong>产品</strong><p>知识 · 体验 · 消费</p></div>
+          <i aria-hidden="true">→</i>
+          <div><span>03</span><strong>内容</strong><p>小红书 / 公众号</p></div>
+        </div>
+        <p class="panel-note">数字口径见「证据」；4 万+ 为核心功能服务用户，不是月活。</p>
+      </aside>
+    </section>
+
+    <section class="section" id="problem">
+      <header class="section-head">
+        <p class="section-label">01 / 问题</p>
+        <div>
+          <h2>非遗不缺故事，缺一个让年轻人愿意停留的入口。</h2>
+          <p class="section-deck">项目开始前，团队面对的不是“内容不够”，而是三个同时存在的断点：年轻人不进来、传播停留在展演、文化价值接不到消费。</p>
+        </div>
+      </header>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <span>01 / 用户</span>
+          <h3>年轻用户断层</h3>
+          <p>皮影的观看场景、语言和节奏，与年轻人的内容消费习惯脱节；传统文化被看见，但没有被进入。</p>
+        </article>
+        <article class="problem-card">
+          <span>02 / 传播</span>
+          <h3>传播形式单一</h3>
+          <p>以展演、图文和静态资料为主，缺少可参与、可分享、可二次创作的体验。</p>
+        </article>
+        <article class="problem-card">
+          <span>03 / 商业</span>
+          <h3>商业转化薄弱</h3>
+          <p>有文化价值和手艺，但缺少从内容到产品、从兴趣到消费的路径。</p>
+        </article>
+      </div>
+      <p class="research-note"><b>研究依据：</b>三类问题来自 11 省 58 市、869 位文旅 / 教育 / 传媒从业者访谈与 2 万+ 有效问卷的归纳；不是先有结论再找例子。</p>
+    </section>
+
+    <section class="section" id="work">
+      <header class="section-head">
+        <p class="section-label">02 / 动作</p>
+        <div>
+          <h2>我负责的那一段：把田野里的<span class="nowrap">原话</span>，变成产品结构和内容动作。</h2>
+          <p class="section-deck">第二次参赛起，我作为项目负责人，负责三条具体工作流：研究、产品策划、内容运营。团队成果和个人职责分开写。</p>
+        </div>
+      </header>
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-head"><span class="role">负责</span><span class="work-num">01</span></div>
+          <h3>用户研究</h3>
+          <p class="work-lede">先把“非遗为什么离年轻人远”问清楚，再决定产品做什么。</p>
+          <ul>
+            <li>设计并执行深度调研，覆盖 11 省 58 市。</li>
+            <li>访谈 869 位文旅、教育、传媒从业者；回收 2 万+ 有效问卷。</li>
+            <li>整理 1.2 万+ 条皮影资料，整合 39 位传承人经验与 46 家档案馆史料。</li>
+          </ul>
+        </article>
+        <article class="work-card">
+          <div class="work-head"><span class="role">主导</span><span class="work-num">02</span></div>
+          <h3>产品策划</h3>
+          <p class="work-lede">把资料库变成一条可体验、可消费的路径，而不是一个资料陈列页。</p>
+          <ul>
+            <li>提出「知识科普—体验互动—衍生消费」产品闭环。</li>
+            <li>主导「灯影世界」V1.0 的功能定义与内容结构。</li>
+            <li>设计 MR 虚拟剧场体验；采用 UV 打印 + PVC 材质工艺，制作成本降低约 70%；申请外观专利 1 项（皮影导引牌）。</li>
+          </ul>
+        </article>
+        <article class="work-card">
+          <div class="work-head"><span class="role">负责</span><span class="work-num">03</span></div>
+          <h3>内容运营</h3>
+          <p class="work-lede">用内容把“非遗”翻译成年轻人愿意点开、看完、转发的表达。</p>
+          <ul>
+            <li>搭建小红书、微信公众号账号矩阵。</li>
+            <li>制作皮影动画，按平台数据反馈调整选题与表达。</li>
+            <li>单月增粉 3 万+，视频播放约 10 万+，矩阵累计触达 10 万+ 青年群体。</li>
+          </ul>
+        </article>
+      </div>
+      <p class="team-note"><b>团队边界：</b>项目由 11 人跨学科团队完成。我第一次参赛时是项目成员，第二次参赛起担任项目负责人，负责用户研究、产品策划与内容运营三条工作流；“灯影世界”V1.0 的产品策划由我主导，但不把整个项目写成个人成果。</p>
+    </section>
+
+    <section class="section" id="structure">
+      <header class="section-head">
+        <p class="section-label">03 / 结构</p>
+        <div>
+          <h2>不是做一个“非遗网站”，而是设计一条从理解到消费的路径。</h2>
+          <p class="section-deck">研究的终点不是报告，而是产品结构：先降低理解门槛，再给参与感，最后接到真实产品与村民收益。</p>
+        </div>
+      </header>
+      <div class="loop">
+        <article class="loop-card">
+          <span>01 / 知识</span>
+          <h3>知识科普</h3>
+          <p>把 1.2 万+ 条资料、39 位传承人和 46 家档案馆史料，整理成年轻人能看懂的内容入口。</p>
+          <b>资料库 → 内容选题 → 可浏览的知识结构</b>
+        </article>
+        <div class="loop-arrow" aria-hidden="true">→</div>
+        <article class="loop-card">
+          <span>02 / 体验</span>
+          <h3>体验互动</h3>
+          <p>用「灯影世界」V1.0、MR 虚拟剧场和皮影动画，让用户先玩起来，而不是先读资料。</p>
+          <b>平台 → 互动 → 分享</b>
+        </article>
+        <div class="loop-arrow" aria-hidden="true">→</div>
+        <article class="loop-card">
+          <span>03 / 消费</span>
+          <h3>衍生消费</h3>
+          <p>用 UV 打印 + PVC 工艺降低制作成本；助农试点带动山西下吐京村 34 位村民增收 62,110 元。</p>
+          <b>工艺降本 → 产品化 → 助农试点</b>
+        </article>
+      </div>
+      <p class="loop-note">内容数据再回到选题与产品迭代，形成「知识—体验—消费」闭环。</p>
+      <blockquote class="quote">
+        <p>非遗不是缺内容，而是缺一个降低理解门槛的入口。产品要先给体验，再谈消费。</p>
+        <span>项目复盘 / 我的判断</span>
+      </blockquote>
+    </section>
+
+    <section class="section" id="evidence">
+      <header class="section-head">
+        <p class="section-label">04 / 证据</p>
+        <div>
+          <h2>数字与口径，分开写。</h2>
+          <p class="section-deck">这些数字来自简历与项目记录；每一项都写清楚“是什么、不是什么”。面试官追问时，口径比数字本身更重要。</p>
+        </div>
+      </header>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <div class="num">11 省 58 市</div>
+          <div class="label">田野调研覆盖</div>
+          <p class="desc">869 位文旅 / 教育 / 传媒从业者深度访谈；2 万+ 有效问卷。</p>
+          <p class="caliber"><b>口径</b>覆盖范围与样本量来自项目调研记录；具体抽样与访谈记录可在面试中展开。</p>
+        </article>
+        <article class="evidence-card">
+          <div class="num">1.2 万<em>+</em></div>
+          <div class="label">皮影资料条目</div>
+          <p class="desc">整合 39 位传承人经验与 46 家档案馆史料，形成内容运营底座。</p>
+          <p class="caliber"><b>口径</b>“条目”不是独立用户数，也不是完整非遗数据库。</p>
+        </article>
+        <article class="evidence-card">
+          <div class="num">4 万<em>+</em></div>
+          <div class="label">核心功能服务用户</div>
+          <p class="desc">「灯影世界」V1.0 核心功能累计服务用户。</p>
+          <p class="caliber"><b>口径</b>不是注册用户、月活或付费用户；没有可公开的留存 / 转化数据。</p>
+        </article>
+        <article class="evidence-card">
+          <div class="num">3 万<em>+</em></div>
+          <div class="label">单月新增关注</div>
+          <p class="desc">小红书 / 公众号内容矩阵的单月增粉；视频播放约 10 万+，矩阵累计触达 10 万+ 青年群体。</p>
+          <p class="caliber"><b>口径</b>平台后台口径；单月数据不代表长期留存或商业转化。</p>
+        </article>
+        <article class="evidence-card">
+          <div class="num">34 位 / 62,110 元</div>
+          <div class="label">助农试点</div>
+          <p class="desc">山西下吐京村 34 位村民参与，项目记录增收 62,110 元。</p>
+          <p class="caliber"><b>口径</b>项目记录口径，未逐户审计；不是项目总营收。</p>
+        </article>
+        <article class="evidence-card">
+          <div class="num">70<em>%</em></div>
+          <div class="label">制作成本降低</div>
+          <p class="desc">采用 UV 打印 + PVC 材质工艺后的成本测算。</p>
+          <p class="caliber"><b>口径</b>工艺环节测算，不是全链条财务审计；不把成本下降等同于利润。</p>
+        </article>
+      </div>
+      <p class="research-note"><b>奖项与知识产权：</b>第十四届“挑战杯”国赛铜奖、“互联网+”国赛铜奖、新文科大赛省级金奖；申请外观专利 1 项（皮影导引牌）。奖项均为团队成果。</p>
+    </section>
+
+    <section class="section" id="boundary">
+      <header class="section-head">
+        <p class="section-label">05 / 边界</p>
+        <div>
+          <h2>能证明<span class="nowrap">什么</span>，不能证明<span class="nowrap">什么</span>。</h2>
+          <p class="section-deck">把边界写清楚，不是自曝其短，而是让面试官知道哪些数字可以继续追问、哪些结论我不会硬撑。</p>
+        </div>
+      </header>
+      <div class="boundary-grid">
+        <article class="boundary-card can">
+          <h3>能证明</h3>
+          <ul>
+            <li>能从一线研究里提炼出可执行的产品问题，而不是停留在文化叙事。</li>
+            <li>能把研究结果变成产品结构、内容矩阵和助农场景。</li>
+            <li>能在 11 人跨学科团队里担任负责人，推进研究、产品与内容三条工作流。</li>
+            <li>能用平台数据反馈调整内容选题，不把“发出去”当成“做完”。</li>
+          </ul>
+        </article>
+        <article class="boundary-card cannot">
+          <h3>不能证明</h3>
+          <ul>
+            <li>没有独立负责项目 P&amp;L，不能把团队成果写成个人经营结果。</li>
+            <li>没有可公开的大规模付费转化、复购或留存数据。</li>
+            <li>没有 AI 产品 / 算法岗位经验；这个案例证明的是研究、产品和内容能力。</li>
+            <li>4 万+ 是核心功能服务用户，不是平台月活；62,110 元是助农试点记录，不是项目营收。</li>
+          </ul>
+        </article>
+      </div>
+      <div class="qa">
+        <h3>面试官可能会追问</h3>
+        <dl class="qa-list">
+          <div class="qa-item">
+            <dt>“869 位从业者，样本怎么选的？”</dt>
+            <dd>覆盖文旅、教育、传媒三类从业者，访谈与问卷两种方法交叉使用；具体抽样与访谈记录可以在面试中展开。这里不把“覆盖 11 省 58 市”说成随机抽样。</dd>
+          </div>
+          <div class="qa-item">
+            <dt>“4 万+ 用户，留存和转化怎么样？”</dt>
+            <dd>4 万+ 是「灯影世界」核心功能累计服务用户，不是注册用户或月活。项目没有可公开的留存、付费转化数据，所以我不把用户规模等同于商业成功。</dd>
+          </div>
+          <div class="qa-item">
+            <dt>“你到底是主导还是参与？”</dt>
+            <dd>我第一次参赛时是项目成员，第二次参赛起担任项目负责人，负责用户研究、产品策划与内容运营三条工作流；「灯影世界」V1.0 的产品策划由我主导。项目整体由 11 人跨学科团队完成，我不把团队成果写成个人成果。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div>
+        <p class="section-label">06 / 联系</p>
+        <h2>如果这个案例和你要招的<span class="nowrap">岗位</span>有关，可以从这里继续。</h2>
+        <p class="section-deck">2027 届，黑龙江大学法语本科 + 法学双学位。方向：产品运营 / 用户研究 / 国际化 GTM。可实习 6 个月。</p>
+      </div>
+      <aside class="contact-card">
+        <p class="name">董盛超</p>
+        <p>2027 届 · 黑龙江大学</p>
+        <p>法语本科 + 法学双学位</p>
+        <a class="mail" href="mailto:228553640@qq.com">228553640@qq.com</a>
+        <div class="contact-actions">
+          <button class="btn" type="button" data-copy>复制案例摘要</button>
+          <button class="btn btn-outline" type="button" onclick="window.print()">打印 / 保存 PDF</button>
+        </div>
+        <p style="margin-top:14px;font-size:10.5px;color:var(--ink-3);">简历与项目原始材料可邮件索取。本页是个人项目复盘，不是公司官方页面。</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <span>古影今声 / CASE 01</span>
+    <span>个人项目复盘 · 数据口径见正文</span>
+    <span>董盛超 · 2026</span>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const toast = document.querySelector('.toast');
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (error) {
+        const area = document.createElement('textarea');
+        area.value = text;
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        area.remove();
+      }
+      showToast('已复制案例摘要');
+    }
+
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', () => {
+        copyText(`董盛超｜古影今声非遗数字化项目
+第二次参赛起担任项目负责人，负责用户研究、产品策划与内容运营。
+11 省 58 市、869 位从业者访谈、2 万+ 有效问卷；主导「灯影世界」V1.0 产品策划；内容矩阵单月增粉 3 万+、视频播放约 10 万+。
+项目获挑战杯国赛铜奖、“互联网+”国赛铜奖、新文科省级金奖（团队）。
+案例：https://xixiyiyiyi.github.io/guying/`);
+      });
+    });
+  </script>
+</body>
+</html>
